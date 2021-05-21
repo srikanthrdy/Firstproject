@@ -32,7 +32,7 @@ pipeline {
             steps {
                 
                 script {
-      sh "$docker_path/docker build -t hello-world-java:${BUILD_NUMBER} ."
+      sh "$docker_path/docker build -t Np:${BUILD_NUMBER} ."
     
             }
         }
