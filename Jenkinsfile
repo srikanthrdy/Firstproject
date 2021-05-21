@@ -32,7 +32,7 @@ pipeline {
             steps {
                 
                 script {
-      sh "$docker_path/docker build -t NP:${BUILD_NUMBER} ."
+      sh "$docker_path/docker build -t NPp:${BUILD_NUMBER} ."
     
             }
         }
