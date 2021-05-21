@@ -9,8 +9,9 @@ pipeline {
     }
     options {
     buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '10'))
-    registerWebhook()
     }
+    registerWebhook()
+    
     stages {
 
         stage("Maven Build") {
