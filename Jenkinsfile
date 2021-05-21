@@ -7,6 +7,7 @@ pipeline {
     tools{
         maven "maven"
     }
+    triggers{ cron('H H(9-16)/2 * * 1-5') }
     options {
     buildDiscarder(logRotator(numToKeepStr: '5', artifactNumToKeepStr: '10'))
     }  
