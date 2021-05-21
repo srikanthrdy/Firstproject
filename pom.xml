@@ -60,7 +60,7 @@
 /${project.build.directory}/jacoco-ut.exec	</sonar.jacoco.reportsPaths>
 		<sonar.sources>src/main/java</sonar.sources>
 		<sonar.tests>src/test/java/service</sonar.tests>
-		<sonar.projectKey>Ice-Cream</sonar.projectKey>
+		<sonar.projectKey>np</sonar.projectKey>
 
 		<sonar.host.url>http://localhost:9002/</sonar.host.url>
 
@@ -140,7 +140,7 @@
 				<plugin>
 					<groupId>org.sonarsource.scanner.maven</groupId>
 					<artifactId>sonar-maven-plugin</artifactId>
-					<version>3.2</version>
+					<version>3.7.0.1746</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
