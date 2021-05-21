@@ -19,21 +19,19 @@ pipeline {
                 }
 
             }
-        stage("Sonar-scan") {
+       stage("SonarQube Analysis") {
             steps {
-                script {
-                    
-                    sh "mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=Rajini@123"
-                }
-
-                }
-            }
+                withSonarQubeEnv('sonar') {
+                sh 'mvn sonar:sonar'
+                  }
+             }
+           } 
         
         stage('Build Docker Image') {
             steps {
                 
                 script {
-      sh "docker build -t hello-world-java:${BUILD_NUMBER} ."
+      sh "$docker_path/docker build -t hello-world-java:${BUILD_NUMBER} ."
     
             }
         }
